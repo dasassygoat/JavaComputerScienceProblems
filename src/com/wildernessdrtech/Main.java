@@ -5,8 +5,17 @@ public class Main {
     public static void main(String[] args) {
         //Fibonacci();
         //Compression();
-        Encryption();
+        //Encryption();
+        PiCalculate();
     }
+
+    public static void PiCalculate(){
+        double output = 4/1 -4/3+4/5-4/7;
+        System.out.println(output);
+
+        System.out.println(PiCalculator.calculatePi(1000000));
+    }
+
     public static void Encryption(){
         KeyPair keyPair = Encryption.encrypt("One time Pad");
         System.out.println(keyPair.key1.toString());
