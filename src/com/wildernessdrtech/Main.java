@@ -6,8 +6,18 @@ public class Main {
         //Fibonacci();
         //Compression();
         //Encryption();
-        PiCalculate();
+        //PiCalculate();
+        Hanoi();
     }
+
+    public static void Hanoi(){
+        Hanoi hanoi = new Hanoi(3);
+        hanoi.solve();
+        System.out.println(hanoi.towerA);
+        System.out.println(hanoi.towerB);
+        System.out.println(hanoi.towerC);
+    }
+
 
     public static void PiCalculate(){
         double output = 4/1 -4/3+4/5-4/7;
@@ -15,7 +25,6 @@ public class Main {
 
         System.out.println(PiCalculator.calculatePi(1000000));
     }
-
     public static void Encryption(){
         KeyPair keyPair = Encryption.encrypt("One time Pad");
         System.out.println(keyPair.key1.toString());
@@ -29,7 +38,6 @@ public class Main {
         String resultDuplicate = Encryption.decrypt(keyPair);
         System.out.println(resultDuplicate);
     }
-
     private static void Compression(){
         Compression compression = new Compression("ACGT");
         Compression compressionATG = new Compression("ATG");
