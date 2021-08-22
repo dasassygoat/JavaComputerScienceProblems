@@ -4,8 +4,23 @@ public class Main {
 
     public static void main(String[] args) {
         //Fibonacci();
-        Compression();
+        //Compression();
+        Encryption();
     }
+    public static void Encryption(){
+        KeyPair keyPair = Encryption.encrypt("One time Pad");
+        System.out.println(keyPair.key1.toString());
+        System.out.println(keyPair.key2.toString());
+        String result = Encryption.decrypt(keyPair);
+        System.out.println(result);
+
+        KeyPair keyPairDuplicate = Encryption.encrypt("One time Pad");
+        System.out.println(keyPairDuplicate.key1.toString());
+        System.out.println(keyPairDuplicate.key2.toString());
+        String resultDuplicate = Encryption.decrypt(keyPair);
+        System.out.println(resultDuplicate);
+    }
+
     private static void Compression(){
         Compression compression = new Compression("ACGT");
         Compression compressionATG = new Compression("ATG");
