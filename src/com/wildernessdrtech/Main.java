@@ -16,9 +16,15 @@ public class Main {
         //Encryption();
         //PiCalculate();
         //Hanoi();
-        EncryptAnImage();
+        //EncryptAnImage();
+        Gene();
     }
 
+    public static void Gene(){
+        Gene g = new Gene("ACGTACGGATCTCTCTAACG");
+        g.main();
+
+    }
     private static void EncryptAnImage() throws IOException {
 
         File file = new File("D:\\development\\src\\github.com\\journeyman32\\JavaComputerScienceProblems\\img_5822.jpg");
@@ -45,7 +51,6 @@ public class Main {
         ImageIO.write(bImage2, "jpg", new File("decrypted.jpg") );
         System.out.println("image created");
     }
-
     public static void Hanoi(){
         Hanoi hanoi = new Hanoi(3);
         hanoi.solve();

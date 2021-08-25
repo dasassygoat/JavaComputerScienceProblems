@@ -9,5 +9,6 @@
 * Pi Calculator
 
 ##Chapter2
+* Gene Search
 
 
